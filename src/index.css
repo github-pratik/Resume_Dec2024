@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+.console-underscore {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: inherit;
+}
+
+.typing-container {
+    color: #333; /* Default text color */
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+
+.github-calendar-container {
+    background-color: #fff !important; /* Always white */
+    border-radius: 8px; 
+    padding: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,51 @@
+.animation {
+    height: 2.5rem; /* Adjust height to match the font size */
+    overflow: hidden; /* Ensure only the active text is visible */
+    display: inline-block; /* Prevent it from breaking the layout */
+    margin-left: 0.5rem; /* Adjust spacing between 'I’m the' and animated text */
+  }
+  
+  .animation > div > div {
+    padding: 0.25rem 0.5rem; /* Provide adequate padding around the text */
+    height: 2.5rem; /* Match the height of the container */
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Vertically align text */
+    justify-content: center; /* Horizontally align text */
+    font-size: 2rem; /* Match the font size with the design */
+    font-weight: bold;
+  }
+  
+  .first div {
+    background-color: #20a7d8; /* Highlight color */
+    color: white; /* Text color */
+  }
+  
+  .second div {
+    background-color: #cd921e; /* Highlight color */
+    color: white; /* Text color */
+  }
+  
+  .third div {
+    background-color: #c10528; /* Highlight color */
+    color: white; /* Text color */
+  }
+  
+  .animation div:first-child {
+    animation: text-animation 8s infinite; /* Continuous animation */
+  }
+  
+  @keyframes text-animation {
+    0%, 10% {
+      margin-top: 0;
+    }
+    20%, 30% {
+      margin-top: -2.5rem; /* Move to the next text */
+    }
+    40%, 50% {
+      margin-top: -5rem; /* Move to the last text */
+    }
+    60%, 100% {
+      margin-top: 0; /* Reset to the first text */
+    }
+  }
+  

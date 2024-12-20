@@ -1,0 +1,27 @@
+.home-container {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    background-color: #1c1e26;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Top banner */
+  .top-banner {
+    width: 100%;
+    background-color: #a0b3ff;
+    color: #1c1e26;
+    padding: 10px;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+  }
+  

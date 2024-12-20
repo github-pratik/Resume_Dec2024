@@ -1,0 +1,27 @@
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  border-right: 3px solid #0366d6; /* Cursor effect */
+  animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

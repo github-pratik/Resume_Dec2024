@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Profile {
+  id             String           @id
+  firstName      String
+  lastName       String
+  headline       String
+  profilePicture String
+  updatedAt      DateTime         @updatedAt
+  posts          Post[]
+  experience     Experience[]
+  accomplishments Accomplishment[]
+}
+
+model Post {
+  id          String   @id
+  content     String
+  publishedAt DateTime
+  likes       Int
+  comments    Int
+  shares      Int
+  profile     Profile  @relation(fields: [profileId], references: [id])
+  profileId   String
+}
+
+model Experience {
+  id          String    @id
+  title       String
+  company     String
+  location    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  profileId   String
+}
+
+model Accomplishment {
+  id          String   @id
+  type        String
+  title       String
+  date        DateTime
+  description String
+  profile     Profile  @relation(fields: [profileId], references: [id])
+  profileId   String
+}
+
+model SyncLog {
+  id        String   @id @default(uuid())
+  timestamp DateTime @default(now())
+  status    String
+  message   String?
+}
